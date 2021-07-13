@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My First Google Map</h1>
+<!-- (23.030553299999998,89.62987240000001), -->
+    
+<body>
+  <div id="map" style="width: 320px; height: 480px;"></div>
+   <div>
+     <input id="address" type="textbox" value="Sydney, NSW">
+     <input type="button" value="Encode" onclick="codeAddress()">
+   </div>
+ </body>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARc6i-bqqp-A2EVdY1sl8kjWcq-qznxNI"></script>
+    <script>
+     import"axios";
+
+const options = {
+  method: 'GET',
+  url: 'https://forward-reverse-geocoding.p.rapidapi.com/v1/reverse',
+  params: {
+    lat: '41.8755616',
+    lon: '-87.6244212',
+    'accept-language': 'en',
+    polygon_threshold: '0.0',
+    json_callback: 'xcsd'
+  },
+  headers: {'x-rapidapi-host': 'forward-reverse-geocoding.p.rapidapi.com'}
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+    </script>
+  </body>
+</html>

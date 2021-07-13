@@ -1,0 +1,11 @@
+<%- include('./header')%>
+   <% var path=path || false %>
+    <% if (path) { %>
+        <h2 style="color: rgb(32, 18, 230); width: 500px;margin: auto;align-items: center;margin-top: 10%;padding: 5px 10px;border-radius: 5px;" class="text-center"><%=msg%></h2>
+        <a style="text-align: center;display:block;width: 200px;margin:auto;" href="/login" class="btn btn-primary link mt-2">login</a>       
+         <% } else { %>
+            <h2 style="color: rgb(47, 119, 6); width: 500px;margin: auto;align-items: center;margin-top: 10%;padding: 5px 10px;border-radius: 5px;" class="text-center"><%=msg%></h2>
+        <% } %>
+</div>
+</body>
+</html>

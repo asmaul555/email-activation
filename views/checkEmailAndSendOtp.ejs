@@ -1,0 +1,14 @@
+<%- include ('./header') %>
+    <h2 class="text-center p-3">Check Valid Email</h2>
+
+    <form class="card p-4" method="POST" action="/api/user/check-email">
+           
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
